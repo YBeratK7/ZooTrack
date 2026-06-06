@@ -7,5 +7,5 @@ define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
 
 define('SITE_NAME', 'ZooTrack');
-define('SITE_URL', 'http://localhost:8080/zoo');
+define('SITE_URL', 'http://95.130.171.20/~st24360859028');
 
