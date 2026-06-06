@@ -21,7 +21,7 @@ Proje dökümanında belirtilen kurallara uygun olarak sistemi şu şekilde kurg
   - Eklenen veriler dinamik olarak ekranda listeleniyor.
   - Kayıtlar üzerinde düzenleme yapılabiliyor.
   - İstenen kayıtlar sistemden silinebiliyor.
-* **Canlı Sunucu:** Projeyi yerel bilgisayarımızdan canlı hosting alanına taşıdık. GitHub reposuna yüklerken de güvenlik kuralı gereği config dosyamızdaki canlı veritabanı şifrelerini sansürledik.
+* **Canlı Sunucu:** Projeyi yerel bilgisayarımızdan canlı hosting alanına taşıdık. GitHub reposuna yüklerken de  güvenlik kuralı gereği config dosyamızdaki canlı veritabanı şifrelerini sansürledik.
 
 ##  Kullanılan Diller ve Araçlar
 * **Backend:** PHP, MySQL (PDO)
