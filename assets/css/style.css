@@ -1,0 +1,389 @@
+/* ZooTrack — Custom Stylesheet */
+/* Aesthetic: Safari/Nature — warm earth tones, bold typography, organic feel */
+
+:root {
+    --zoo-dark:    #1a1a0e;
+    --zoo-brown:   #3d2b1f;
+    --zoo-amber:   #c8860a;
+    --zoo-gold:    #e8a020;
+    --zoo-cream:   #f5f0e8;
+    --zoo-sage:    #6b7c5c;
+    --zoo-rust:    #a0442a;
+    --zoo-green:   #2d4a1e;
+    --zoo-light:   #faf7f2;
+    --zoo-border:  #e0d5c5;
+    --bs-body-bg:  #faf7f2;
+    --bs-body-font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Base ── */
+body {
+    background: var(--zoo-light);
+    color: var(--zoo-dark);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .brand-text, .display-heading {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+}
+
+/* ── Navbar ── */
+.zoo-navbar {
+    background: var(--zoo-dark);
+    border-bottom: 3px solid var(--zoo-amber);
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.brand-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    color: var(--zoo-gold);
+    letter-spacing: -0.5px;
+}
+
+.zoo-navbar .nav-link {
+    color: rgba(255,255,255,0.75) !important;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem !important;
+    transition: all 0.2s;
+}
+
+.zoo-navbar .nav-link:hover,
+.zoo-navbar .nav-link.active {
+    color: #fff !important;
+    background: rgba(200, 134, 10, 0.25);
+}
+
+.zoo-navbar .nav-link.active {
+    border-bottom: 2px solid var(--zoo-gold);
+}
+
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+/* ── Layout ── */
+main.with-nav {
+    min-height: calc(100vh - 120px);
+}
+
+.zoo-footer {
+    background: var(--zoo-dark);
+    border-top: 2px solid var(--zoo-amber);
+    margin-top: auto;
+}
+
+/* ── Auth Pages ── */
+.auth-wrapper {
+    min-height: 100vh;
+    background: var(--zoo-dark);
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(200,134,10,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(45,74,30,0.2) 0%, transparent 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+}
+
+.auth-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-logo .logo-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.auth-logo h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    color: var(--zoo-amber);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.auth-logo p {
+    color: #888;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0;
+}
+
+/* ── Cards ── */
+.zoo-card {
+    background: #fff;
+    border: 1.5px solid var(--zoo-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.zoo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+/* ── Stat Cards (Dashboard) ── */
+.stat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    border: 1.5px solid var(--zoo-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent, var(--zoo-amber));
+}
+
+.stat-card .stat-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.stat-card .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--zoo-dark);
+}
+
+.stat-card .stat-label {
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ── Animal Cards ── */
+.animal-card {
+    background: #fff;
+    border: 1.5px solid var(--zoo-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+.animal-card:hover {
+    border-color: var(--zoo-amber);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(200,134,10,0.15);
+}
+
+.animal-card-header {
+    padding: 1.25rem 1.25rem 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.animal-emoji {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--zoo-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.animal-card-body {
+    padding: 0 1.25rem 1.25rem;
+}
+
+.animal-card-footer {
+    padding: 0.75rem 1.25rem;
+    background: var(--zoo-cream);
+    border-top: 1px solid var(--zoo-border);
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ── Badges / Status ── */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.status-healthy   { background: #d4edda; color: #155724; }
+.status-treatment { background: #fff3cd; color: #856404; }
+.status-quarantine{ background: #f8d7da; color: #721c24; }
+.status-deceased  { background: #e2e3e5; color: #383d41; }
+
+/* ── Buttons ── */
+.btn-zoo-primary {
+    background: var(--zoo-amber);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.55rem 1.4rem;
+    transition: all 0.2s;
+}
+
+.btn-zoo-primary:hover {
+    background: var(--zoo-gold);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(200,134,10,0.35);
+}
+
+.btn-zoo-outline {
+    background: transparent;
+    border: 1.5px solid var(--zoo-amber);
+    color: var(--zoo-amber);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.2s;
+}
+
+.btn-zoo-outline:hover {
+    background: var(--zoo-amber);
+    color: #fff;
+}
+
+/* ── Forms ── */
+.form-control, .form-select {
+    border: 1.5px solid var(--zoo-border);
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--zoo-amber);
+    box-shadow: 0 0 0 3px rgba(200,134,10,0.15);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--zoo-brown);
+    margin-bottom: 0.35rem;
+}
+
+/* ── Page Header ── */
+.page-header {
+    background: var(--zoo-dark);
+    color: #fff;
+    padding: 2rem 0 1.75rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--zoo-amber);
+}
+
+.page-header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.page-header p {
+    color: rgba(255,255,255,0.6);
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+}
+
+/* ── Table ── */
+.zoo-table {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1.5px solid var(--zoo-border);
+}
+
+.zoo-table thead th {
+    background: var(--zoo-dark);
+    color: var(--zoo-gold);
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 0.9rem 1rem;
+}
+
+.zoo-table tbody tr {
+    transition: background 0.15s;
+}
+
+.zoo-table tbody tr:hover {
+    background: var(--zoo-cream);
+}
+
+.zoo-table td {
+    vertical-align: middle;
+    border-color: var(--zoo-border);
+    padding: 0.75rem 1rem;
+}
+
+/* ── Alerts ── */
+.zoo-alert {
+    border-radius: 12px;
+    border: none;
+    padding: 0.85rem 1.2rem;
+    font-weight: 500;
+}
+
+/* ── Empty State ── */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #aaa;
+}
+
+.empty-state .empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .auth-card { padding: 1.75rem; }
+    .page-header h1 { font-size: 1.4rem; }
+}
