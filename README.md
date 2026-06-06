@@ -15,9 +15,9 @@ Web Tabanlı Programlama dersi dönem projesi için hazırladığımız Hayvanat
 
 ##  Projede Neler Var? (İstenen Kriterler)
 Proje dökümanında belirtilen kurallara uygun olarak sistemi şu şekilde kurguladım:
-* **Şifre Güvenliği:** Kullanıcı şifrelerini veritabanına açık bir şekilde kaydetmek yerine `password_hash()` fonksiyonu ile şifreledim.
-* **Oturum Yönetimi:** Kullanıcı giriş ve yetki kontrollerini çerezler ile değil, güvenli bir şekilde `Session` kullanarak sağladım.
-* **Veritabanı İşlemleri (CRUD):** - Sisteme yeni hayvan/personel bilgisi eklenebiliyor (Create).
+* **Şifre Güvenliği:** Kullanıcı şifrelerini veritabanına açık bir şekilde kaydetmek yerine `password_hash()` fonksiyonu ile şifreledik.
+* **Oturum Yönetimi:** Kullanıcı giriş ve yetki kontrollerini çerezler ile değil, güvenli bir şekilde `Session` kullanarak sağladık.
+* **Veritabanı İşlemleri (CRUD):** - Sisteme yeni hayvan/personel bilgisi eklenebiliyor.
   - Eklenen veriler dinamik olarak ekranda listeleniyor.
   - Kayıtlar üzerinde düzenleme yapılabiliyor.
   - İstenen kayıtlar sistemden silinebiliyor.
